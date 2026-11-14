@@ -1019,6 +1019,18 @@
     .kw-gold{color:#f3d68a;font-style:italic;font-weight:600}
     .kw-chip{display:inline-block;padding:0 .45em;margin:0 .05em;border:1px solid #c9a24a;border-radius:8px;background:rgba(201,162,74,.12);color:#f8e7b0;font-style:normal;font-weight:700;box-shadow:0 0 0 3px rgba(201,162,74,.08)}
     .kw-line{background:linear-gradient(transparent 62%,rgba(201,162,74,.45) 62%);padding:0 .1em;color:#fff;font-weight:700}
+
+    mark.kw-hl{background:linear-gradient(transparent 58%,rgba(201,162,74,.38) 58%);color:inherit;padding:0 .12em;border-radius:3px;font-weight:700}
+    .pbar{position:relative;display:flex;align-items:center;gap:.75rem;margin:.2rem 0 1.1rem;height:26px}
+    .pbar::before{content:"";position:absolute;left:0;right:90px;height:10px;border-radius:99px;background:#e6edf0;top:50%;transform:translateY(-50%)}
+    .pbar-fill{position:absolute;left:0;height:10px;top:50%;transform:translateY(-50%);width:0;border-radius:99px;background:linear-gradient(90deg,#0f766e,#c9a24a);transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+    .pbar span{position:relative;margin-left:auto;min-width:90px;text-align:right;font-weight:800;font-size:.85rem;color:var(--accent-green)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease,box-shadow .2s ease}
+    .reveal.in{opacity:1;transform:none}
+    .reveal.in.lift:hover{transform:translateY(-3px);box-shadow:0 14px 30px -12px rgba(15,23,42,.18)}
+    .reveal.in .pbar-fill{width:var(--w)}
+    .section-icon-wrap svg{width:24px;height:24px}
+    section[id^="apartado"]{transition:transform .25s ease,box-shadow .25s ease}
     body.dark{--bg-color:#0b1220;--card-bg:#111a2b;--card-border:#22304a;--text-main:#e6edf7;--text-muted:#9fb0c8}
     body.dark header{background:linear-gradient(135deg,#111a2b,#0f2420,#2a2410)}
     body.dark .toolbar{background:rgba(11,18,32,.94)}
@@ -1126,10 +1138,10 @@
     </aside>
 
     <main id="mainContent">
-      <section id="apartado-1">
+      <section id="apartado-1" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg></div>
             <div>
               <h2>Introducción</h2>
             </div>
@@ -1139,10 +1151,10 @@
           <p>La pigmentación de la piel humana es un fenómeno biológico complejo determinado primordialmente por la síntesis y distribución de melanina, un pigmento biológico producido por los melanocitos situados en la capa basal de la epidermis. Las alteraciones en la pigmentación, conocidas clínicamente como discromías e hipermelanosis faciales, representan una de las causas más frecuentes de consulta dermatológica y médica estética a nivel global.</p>
         </div>
       </section>
-      <section id="apartado-2">
+      <section id="apartado-2" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Planteamiento del problema · Parte 1</h2>
             </div>
@@ -1152,23 +1164,23 @@
           <p>La piel, como el órgano más extenso del cuerpo humano, se encuentra expuesta de manera constante a múltiples factores exógenos y endógenos que alteran su homeostasis. Entre las afecciones dermatológicas de mayor prevalencia en la región facial sobresalen las hipermelanosis, las cuales se caracterizan por una sobreproducción o acumulación anómala de pigmento melánico en la superficie epitelial o en la matriz dermal.</p>
         </div>
       </section>
-      <section id="apartado-3">
+      <section id="apartado-3" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Planteamiento del problema · Epidemiología</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Epidemiológicamente, condiciones como el melasma afectan hasta un 30% de la población femenina en edad reproductiva en regiones tropicales y de fototipos intermedios a oscuros, mientras que los léntigos solares muestran una prevalencia que supera el 50% en individuos mayores de 50 años expuestos a radiación ultravioleta (RUV) de forma crónica.</p>
+          <p>Epidemiológicamente, condiciones como el <mark class="kw-hl">melasma</mark> afectan hasta un 30% de la población femenina en edad reproductiva en regiones tropicales y de <mark class="kw-hl">fototipos</mark> intermedios a oscuros, mientras que los léntigos solares muestran una prevalencia que supera el 50% en individuos mayores de 50 años expuestos a radiación ultravioleta (RUV) de forma crónica.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:50%"></div><span>30% – 50%</span></div>
         </div>
       </section>
-      <section id="apartado-4">
+      <section id="apartado-4" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Formulación del problema</h2>
             </div>
@@ -1176,69 +1188,69 @@
         </div>
         <div class="section-body">
           <p>Con base en la problemática expuesta, se formula la siguiente interrogante principal de investigación:</p>
-          <p>¿Cuál es el grado de efectividad terapéutica de los tratamientos con peeling químico en la reducción de las hiperpigmentaciones y manchas faciales, al contrastar las posturas teóricas clásicas con la evidencia empírica científica reciente?</p>
+          <p>¿Cuál es el grado de efectividad terapéutica de los tratamientos con <mark class="kw-hl">peeling químico</mark> en la reducción de las <mark class="kw-hl">hiperpigmentaciones</mark> y manchas faciales, al contrastar las posturas teóricas clásicas con la <mark class="kw-hl">evidencia</mark> empírica científica reciente?</p>
         </div>
       </section>
-      <section id="apartado-5">
+      <section id="apartado-5" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3"/></svg></div>
             <div>
               <h2>Subpreguntas de investigación</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>¿Cuáles son los mecanismos fisiopatológicos subyacentes a las hiperpigmentaciones faciales y las bases químicas de los principales agentes de peeling (AHA, BHA, TCA y formulaciones combinadas)?</p>
-          <p>¿Qué porcentaje de eficacia cuantitativa e índice de reducción de severidad (MASI/mMASI) reportan las investigaciones clínicas en el tratamiento de manchas faciales?</p>
-          <p>¿Existe correspondencia empírica entre los postulados teóricos del peeling químico y los resultados evidenciados en términos de recurrencia, efectos adversos y tolerancia en diferentes fototipos?</p>
+          <p>¿Cuáles son los mecanismos fisiopatológicos subyacentes a las <mark class="kw-hl">hiperpigmentaciones</mark> faciales y las bases químicas de los principales agentes de <mark class="kw-hl">peeling</mark> (AHA, BHA, <mark class="kw-hl">TCA</mark> y formulaciones combinadas)?</p>
+          <p>¿Qué porcentaje de <mark class="kw-hl">eficacia</mark> cuantitativa e índice de reducción de severidad (<mark class="kw-hl">MASI</mark>/<mark class="kw-hl">mMASI</mark>) reportan las investigaciones clínicas en el tratamiento de manchas faciales?</p>
+          <p>¿Existe correspondencia empírica entre los postulados teóricos del <mark class="kw-hl">peeling químico</mark> y los resultados evidenciados en términos de <mark class="kw-hl">recurrencia</mark>, efectos adversos y tolerancia en diferentes <mark class="kw-hl">fototipos</mark>?</p>
         </div>
       </section>
-      <section id="apartado-6">
+      <section id="apartado-6" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
             <div>
               <h2>Objetivo general</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Analizar la efectividad de los tratamientos con peeling químico en la reducción de hiperpigmentaciones y manchas faciales, mediante una investigación documental de nivel descriptivo-explicativo con contrastación teórica de la evidencia científica.</p>
+          <p>Analizar la efectividad de los tratamientos con <mark class="kw-hl">peeling químico</mark> en la reducción de <mark class="kw-hl">hiperpigmentaciones</mark> y manchas faciales, mediante una investigación documental de nivel descriptivo-explicativo con contrastación teórica de la <mark class="kw-hl">evidencia</mark> científica.</p>
         </div>
       </section>
-      <section id="apartado-7">
+      <section id="apartado-7" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
             <div>
               <h2>Objetivos específicos · Parte 1</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Identificar los fundamentos teóricos y mecanismos de acción molecular de los peeling químicos (alfa-hidroxiácidos, beta-hidroxiácidos, TCA y peelings combinados) utilizados en la terapia de las hipermelanosis faciales.</p>
-          <p>Sintetizar la evidencia científica documental reciente respecto a los niveles de reducción del índice MASI/mMASI y la satisfacción clínica en pacientes sometidos a quimioexfoliación.</p>
+          <p>Identificar los fundamentos teóricos y mecanismos de acción molecular de los <mark class="kw-hl">peeling</mark> químicos (alfa-hidroxiácidos, beta-hidroxiácidos, <mark class="kw-hl">TCA</mark> y peelings combinados) utilizados en la terapia de las hipermelanosis faciales.</p>
+          <p>Sintetizar la <mark class="kw-hl">evidencia</mark> científica documental reciente respecto a los niveles de reducción del índice <mark class="kw-hl">MASI</mark>/<mark class="kw-hl">mMASI</mark> y la satisfacción clínica en pacientes sometidos a quimioexfoliación.</p>
         </div>
       </section>
-      <section id="apartado-8">
+      <section id="apartado-8" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
             <div>
               <h2>Objetivos específicos · Parte 2</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Contrastar los postulados teóricos tradicionales del peeling químico con los hallazgos empíricos reportados en la literatura médica contemporánea, evaluando variables de eficacia, seguridad y tasa de recidiva.</p>
-          <p>Formular recomendaciones metodológicas y clínicas sustentadas en la evidencia para optimizar el protocolo de aplicación de peelings químicos en manchas faciales.</p>
+          <p>Contrastar los postulados teóricos tradicionales del <mark class="kw-hl">peeling químico</mark> con los hallazgos empíricos reportados en la literatura médica contemporánea, evaluando variables de <mark class="kw-hl">eficacia</mark>, seguridad y tasa de recidiva.</p>
+          <p>Formular recomendaciones metodológicas y clínicas sustentadas en la <mark class="kw-hl">evidencia</mark> para optimizar el protocolo de aplicación de peelings químicos en manchas faciales.</p>
         </div>
       </section>
-      <section id="apartado-9">
+      <section id="apartado-9" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></div>
             <div>
               <h2>Justificación · Aporte teórico</h2>
             </div>
@@ -1246,39 +1258,39 @@
         </div>
         <div class="section-body">
           <p>La trascendencia del presente trabajo radica en su aporte académico, metodológico, social y práctico dentro del área de la dermatología, la cosmiatría médica y la salud estética.</p>
-          <p>Desde el punto de vista teórico, el estudio sistematiza y categoriza la información científica dispersa, ofreciendo un marco analítico estructurado que aclara los mecanismos moleculares y las dinámicas histológicas asociadas a la quimioexfoliación. Al contrastar la teoría clásica con la evidencia empírica actualizada, se genera un cuerpo de conocimiento crítico que contribuye a depurar conceptos equivocados respecto a la agresividad vs. efectividad del peeling en el tratamiento de melasma y HPI.</p>
+          <p>Desde el punto de vista teórico, el estudio sistematiza y categoriza la información científica dispersa, ofreciendo un marco analítico estructurado que aclara los mecanismos moleculares y las dinámicas histológicas asociadas a la quimioexfoliación. Al contrastar la teoría clásica con la <mark class="kw-hl">evidencia</mark> empírica actualizada, se genera un cuerpo de conocimiento crítico que contribuye a depurar conceptos equivocados respecto a la agresividad vs. efectividad del <mark class="kw-hl">peeling</mark> en el tratamiento de <mark class="kw-hl">melasma</mark> y HPI.</p>
         </div>
       </section>
-      <section id="apartado-10">
+      <section id="apartado-10" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></div>
             <div>
               <h2>Justificación · Aporte metodológico</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>En el ámbito metodológico, este trabajo aporta un modelo riguroso de revisión sistemática y contrastación cuali-cuantitativa aplicable a estudios documentales dermatológicos, estableciendo criterios de evaluación basados en escalas validadas internacionalmente como el índice MASI (Melasma Area and Severity Index).</p>
+          <p>En el ámbito metodológico, este trabajo aporta un modelo riguroso de revisión sistemática y contrastación cuali-cuantitativa aplicable a estudios documentales dermatológicos, estableciendo criterios de evaluación basados en escalas validadas internacionalmente como el índice <mark class="kw-hl">MASI</mark> (<mark class="kw-hl">Melasma</mark> Area and Severity Index).</p>
         </div>
       </section>
-      <section id="apartado-11">
+      <section id="apartado-11" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></div>
             <div>
               <h2>Justificación · Aporte práctico y clínico</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Desde la perspectiva práctica y clínica, los resultados proveen a los profesionales médicos y especialistas en estética una guía fundamentada en evidencia para la selección óptima del agente químico, considerando variables clave como el fototipo de Fitzpatrick, el pH de la solución, la profundidad de la mancha y el riesgo de reacciones adversas.</p>
+          <p>Desde la perspectiva práctica y clínica, los resultados proveen a los profesionales médicos y especialistas en estética una guía fundamentada en <mark class="kw-hl">evidencia</mark> para la selección óptima del agente químico, considerando variables clave como el fototipo de Fitzpatrick, el pH de la solución, la profundidad de la mancha y el riesgo de reacciones adversas.</p>
         </div>
       </section>
-      <section id="apartado-12">
+      <section id="apartado-12" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3"/></svg></div>
             <div>
               <h2>Fase II · Bases teóricas y metodológicas</h2>
             </div>
@@ -1288,10 +1300,10 @@
           <p>FASE II · BASES TEÓRICAS Y METODOLÓGICAS</p>
         </div>
       </section>
-      <section id="apartado-13">
+      <section id="apartado-13" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" x2="16" y1="13" y2="13"/><line x1="8" x2="16" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Antecedentes · Garg et al. (2022)</h2>
             </div>
@@ -1299,135 +1311,135 @@
         </div>
         <div class="section-body">
           <p>Para contextualizar el objeto de estudio, se procedió a revisar antecedentes científicos de alta relevancia y rigor metodológico publicados en revistas indizadas:</p>
-          <p>Garg et al. (2022), en su estudio comparativo clínico aleatorizado titulado “Efficacy of 30% Glycolic Acid vs 20% Salicylic-10% Mandelic Acid Peel in Melasma: A Randomized Controlled Trial”, evaluaron a 60 pacientes divididos en dos grupos. Ambos grupos mostraron una reducción estadísticamente significativa en el índice MASI a las 12 semanas (p &lt; 0.001). El grupo tratado con la combinación Salicílico-Mandélico evidenció una menor tasa de eritema inicial y una mejor tolerancia en pacientes con fototipos IV y V, concluyendo que la combinación de hidroxiácidos lipofílicos e hidrofílicos optimiza la tolerancia reduciendo la irritación que suele inducir pigmentación secundaria.</p>
+          <p>Garg et al. (2022), en su estudio comparativo clínico aleatorizado titulado “Efficacy of 30% Glycolic Acid vs 20% Salicylic-10% Mandelic Acid Peel in <mark class="kw-hl">Melasma</mark>: A Randomized Controlled Trial”, evaluaron a 60 pacientes divididos en dos grupos. Ambos grupos mostraron una reducción estadísticamente significativa en el índice <mark class="kw-hl">MASI</mark> a las 12 semanas (p &lt; 0.001). El grupo tratado con la combinación Salicílico-Mandélico evidenció una menor tasa de <mark class="kw-hl">eritema</mark> inicial y una mejor tolerancia en pacientes con <mark class="kw-hl">fototipos</mark> IV y V, concluyendo que la combinación de hidroxiácidos lipofílicos e hidrofílicos optimiza la tolerancia reduciendo la irritación que suele inducir pigmentación secundaria.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:30%"></div><span>10% – 30%</span></div>
         </div>
       </section>
-      <section id="apartado-14">
+      <section id="apartado-14" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" x2="16" y1="13" y2="13"/><line x1="8" x2="16" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Antecedentes · Sarkar et al. (2020)</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Sarkar et al. (2020), en una revisión sistemática y metaanálisis sobre “Comparative Evaluation of Chemical Peeling Agents in Facial Hyperpigmentation”, analizaron 24 ensayos clínicos controlados. Los resultados indicaron que la adición de peeling químico a la terapia triple clásica (Hidroquinona + Tretinoína + Fluocinolona) acelera el aclaramiento en un 35% en comparación con la monoterapia tópica durante las primeras 6 semanas. Sin embargo, enfatizaron que los peelings superficiales repetidos ofrecen una efectividad global equivalente a los peelings de profundidad media pero con una tasa significativamente menor de efectos adversos (p &lt; 0.05).</p>
+          <p>Sarkar et al. (2020), en una revisión sistemática y metaanálisis sobre “Comparative Evaluation of Chemical <mark class="kw-hl">Peeling</mark> Agents in Facial Hyperpigmentation”, analizaron 24 ensayos clínicos controlados. Los resultados indicaron que la adición de <mark class="kw-hl">peeling químico</mark> a la terapia triple clásica (Hidroquinona + Tretinoína + Fluocinolona) acelera el aclaramiento en un 35% en comparación con la monoterapia tópica durante las primeras 6 semanas. Sin embargo, enfatizaron que los peelings superficiales repetidos ofrecen una efectividad global equivalente a los peelings de profundidad media pero con una tasa significativamente menor de efectos adversos (p &lt; 0.05).</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:35%"></div><span>35%</span></div>
         </div>
       </section>
-      <section id="apartado-15">
+      <section id="apartado-15" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" x2="16" y1="13" y2="13"/><line x1="8" x2="16" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Antecedentes · Rendon y Ghassemi (2021)</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Rendon y Ghassemi (2021), en su trabajo “Transepidermal Delivery and Chemical Exfoliation in Dyschromias: A Molecular Approach”, investigaron el impacto de formulaciones más recientes como el Ácido Tranexámico en peeling combinado. Sus hallazgos demostraron que el ácido tranexámico no solo actúa como dermoexfoliante suave, sino que inhibe la vía del plasminógeno, bloqueando la interacción entre queratinocitos y melanocitos inducida por la radiación UV, lo que reduce la recurrencia del melasma vascularizado en un 40% a los 6 meses de seguimiento.</p>
+          <p>Rendon y Ghassemi (2021), en su trabajo “Transepidermal Delivery and Chemical Exfoliation in Dyschromias: A Molecular Approach”, investigaron el impacto de formulaciones más recientes como el Ácido Tranexámico en <mark class="kw-hl">peeling</mark> combinado. Sus hallazgos demostraron que el ácido tranexámico no solo actúa como dermoexfoliante suave, sino que inhibe la vía del plasminógeno, bloqueando la interacción entre queratinocitos y melanocitos inducida por la radiación UV, lo que reduce la <mark class="kw-hl">recurrencia</mark> del <mark class="kw-hl">melasma</mark> vascularizado en un 40% a los 6 meses de seguimiento.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:40%"></div><span>40%</span></div>
         </div>
       </section>
-      <section id="apartado-16">
+      <section id="apartado-16" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" x2="16" y1="13" y2="13"/><line x1="8" x2="16" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Bases teóricas · Peeling químico</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>El peeling químico se define teóricamente como la aplicación sobre la piel de uno o varios agentes químicos cáusticos o exfoliantes que provocan una queratolisis, epidermolisis y/o desnaturalización proteica controlada de la epidermis y dermis. La respuesta biológica incluye la liberación de citoquinas inflamatorias, la estimulación de la síntesis de colágeno en la dermis papilar y la remoción acelerada del estrato córneo y epidérmico hiperpigmentado.</p>
+          <p>El <mark class="kw-hl">peeling químico</mark> se define teóricamente como la aplicación sobre la piel de uno o varios agentes químicos cáusticos o exfoliantes que provocan una queratolisis, epidermolisis y/o desnaturalización proteica controlada de la epidermis y dermis. La respuesta biológica incluye la liberación de citoquinas inflamatorias, la estimulación de la síntesis de colágeno en la dermis papilar y la remoción acelerada del estrato córneo y epidérmico hiperpigmentado.</p>
         </div>
       </section>
-      <section id="apartado-17">
+      <section id="apartado-17" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" x2="16" y1="13" y2="13"/><line x1="8" x2="16" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Clasificación de agentes de peeling químico</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Ácido Glicólico (30%-70%) | Alfa-Hidroxiácido (AHA) | Superficial a Media | Disminuye la cohesión de queratinocitos epidérmicos; promueve epidermolisis y dispersión del pigmento basal.</p>
-          <p>Ácido Salicílico (20%-30%) | Beta-Hidroxiácido (BHA) | Superficial | Lipofílico; queratolítico, solubiliza los lípidos intercelulares; efecto antiinflamatorio directo.</p>
-          <p>Ácido Tricloroacético - TCA (10%-35%) | Ácido Orgánico Inorgánico | Superficial a Media | Coagulación proteica (frosting); necrosis epidérmica controlada y sustitución por tejido nuevo de epidermis.</p>
-          <p>Ácido Tranexámico / Mandélico | AHA / Inhibidor Sintético | Muy Superficial | Inhibición de tirosinasa y vía plasminógeno/VEGF; alta tolerancia en pieles sensibles.</p>
+          <p>Ácido Glicólico (30%-70%) | Alfa-Hidroxiácido (AHA) | Superficial a Media | Disminuye la cohesión de queratinocitos epidérmicos; promueve epidermolisis y dispersión del pigmento basal.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:70%"></div><span>30% – 70%</span></div>
+          <p>Ácido Salicílico (20%-30%) | Beta-Hidroxiácido (BHA) | Superficial | Lipofílico; queratolítico, solubiliza los lípidos intercelulares; efecto antiinflamatorio directo.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:30%"></div><span>20% – 30%</span></div>
+          <p>Ácido Tricloroacético - <mark class="kw-hl">TCA</mark> (10%-35%) | Ácido Orgánico Inorgánico | Superficial a Media | Coagulación proteica (frosting); necrosis epidérmica controlada y sustitución por tejido nuevo de epidermis.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:35%"></div><span>10% – 35%</span></div>
+          <p>Ácido Tranexámico / Mandélico | AHA / Inhibidor Sintético | Muy Superficial | Inhibición de <mark class="kw-hl">tirosinasa</mark> y vía plasminógeno/VEGF; alta tolerancia en pieles sensibles.</p>
         </div>
       </section>
-      <section id="apartado-18">
+      <section id="apartado-18" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
             <div>
               <h2>Variable dependiente · Hiperpigmentaciones</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Las hiperpigmentaciones faciales corresponden a condiciones dermatológicas caracterizadas por el incremento local o difuso de la melanina. Clínicamente se dividen según la profundidad del depósito del pigmento:</p>
-          <p>Hiperpigmentación Epidérmica: El pigmento se sitúa en la capa basal y espinosa. Responde con alta eficacia a los exfoliantes superficiales.</p>
+          <p>Las <mark class="kw-hl">hiperpigmentaciones</mark> faciales corresponden a condiciones dermatológicas caracterizadas por el incremento local o difuso de la melanina. Clínicamente se dividen según la profundidad del depósito del pigmento:</p>
+          <p><mark class="kw-hl">Hiperpigmentación</mark> Epidérmica: El pigmento se sitúa en la capa basal y espinosa. Responde con alta <mark class="kw-hl">eficacia</mark> a los exfoliantes superficiales.</p>
         </div>
       </section>
-      <section id="apartado-19">
+      <section id="apartado-19" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div>
             <div>
               <h2>Hiperpigmentación dérmica y mixta</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Hiperpigmentación Dérmica: Presenta melanófagos cargados de pigmento en la dermis papilar y reticular. Muestra resistencia terapéutica y requiere agentes con efecto inmunomodulador o de mayor penetración.</p>
-          <p>Hiperpigmentación Mixta: Combinación de componentes epidérmicos y dérmicos; es la presentación más común del melasma.</p>
+          <p><mark class="kw-hl">Hiperpigmentación</mark> Dérmica: Presenta melanófagos cargados de pigmento en la dermis papilar y reticular. Muestra resistencia terapéutica y requiere agentes con efecto inmunomodulador o de mayor penetración.</p>
+          <p><mark class="kw-hl">Hiperpigmentación</mark> Mixta: Combinación de componentes epidérmicos y dérmicos; es la presentación más común del <mark class="kw-hl">melasma</mark>.</p>
         </div>
       </section>
-      <section id="apartado-20">
+      <section id="apartado-20" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3"/></svg></div>
             <div>
               <h2>Tipo de investigación</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>El presente estudio se enmarca en una investigación documental de carácter descriptivo, explicativo y con diseño de contrastación teórica. Es de naturaleza puramente secundaria y no experimental, pues no involucra intervención directa sobre sujetos humanos vivos ni toma de muestras clínicas primarias, sino la recolección, selección, análisis e integración de evidencia publicada en bases de datos indizadas (PubMed, Scopus, Web of Science, ScienceDirect, SciELO) entre los años 2018 y 2026.</p>
+          <p>El presente estudio se enmarca en una investigación documental de carácter descriptivo, explicativo y con diseño de contrastación teórica. Es de naturaleza puramente secundaria y no experimental, pues no involucra intervención directa sobre sujetos humanos vivos ni toma de muestras clínicas primarias, sino la recolección, selección, análisis e integración de <mark class="kw-hl">evidencia</mark> publicada en bases de datos indizadas (PubMed, Scopus, Web of Science, ScienceDirect, SciELO) entre los años 2018 y 2026.</p>
         </div>
       </section>
-      <section id="apartado-21">
+      <section id="apartado-21" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" x2="16" y1="13" y2="13"/><line x1="8" x2="16" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Técnicas de recolección de datos</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Técnica de Arqueo Bibliográfico y Análisis Documental: Búsqueda sistemática mediante operadores booleanos (AND, OR, NOT) con descriptores MeSH: “Chemical Peel”, “Melasma”, “Hyperpigmentation”, “Glycolic Acid”, “Trichloroacetic Acid”, “MASI score”.</p>
+          <p>Técnica de Arqueo Bibliográfico y Análisis Documental: Búsqueda sistemática mediante operadores booleanos (AND, OR, NOT) con descriptores MeSH: “Chemical Peel”, “<mark class="kw-hl">Melasma</mark>”, “Hyperpigmentation”, “Glycolic Acid”, “Trichloroacetic Acid”, “<mark class="kw-hl">MASI</mark> score”.</p>
         </div>
       </section>
-      <section id="apartado-22">
+      <section id="apartado-22" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" x2="16" y1="13" y2="13"/><line x1="8" x2="16" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Instrumento de arqueo bibliográfico</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Matriz de Registro y Contraste Bibliográfico: Ficha analítica diseñada para extraer de forma estandarizada los siguientes parámetros: Autor(es), Año, Tipo de Agente, Concentración/pH, Tamaño de la Muestra, Escala de Evaluación (MASI/mMASI), Porcentaje de Reducción Pigmentaria, Efectos Adversos y Tasa de Recidiva.</p>
+          <p>Matriz de Registro y Contraste Bibliográfico: Ficha analítica diseñada para extraer de forma estandarizada los siguientes parámetros: Autor(es), Año, Tipo de Agente, Concentración/pH, Tamaño de la Muestra, Escala de Evaluación (<mark class="kw-hl">MASI</mark>/<mark class="kw-hl">mMASI</mark>), Porcentaje de Reducción Pigmentaria, Efectos Adversos y Tasa de Recidiva.</p>
         </div>
       </section>
-      <section id="apartado-23">
+      <section id="apartado-23" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" x2="16" y1="13" y2="13"/><line x1="8" x2="16" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Filtros de inclusión y criterios de rigor</h2>
             </div>
@@ -1437,10 +1449,10 @@
           <p>Se seleccionaron ensayos clínicos controlados aleatorizados (ECA), estudios comparativos, meta análisis y revisiones sistemáticas con evaluación objetiva mediante dermatoscopia, colorimetría o escalas de severidad validadas.</p>
         </div>
       </section>
-      <section id="apartado-24">
+      <section id="apartado-24" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
             <div>
               <h2>Fase III · Resultados de la investigación</h2>
             </div>
@@ -1450,10 +1462,10 @@
           <p>FASE III · RESULTADOS DE LA INVESTIGACIÓN</p>
         </div>
       </section>
-      <section id="apartado-25">
+      <section id="apartado-25" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
             <div>
               <h2>Resultados · Corpus analizado</h2>
             </div>
@@ -1463,67 +1475,67 @@
           <p>Tras la sistematización y consolidación de los datos extraídos de la literatura médica seleccionada (n=32 estudios evaluados a fondo), los hallazgos principales se agrupan en tres ejes analíticos de efectividad.</p>
         </div>
       </section>
-      <section id="apartado-26">
+      <section id="apartado-26" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" x2="16" y1="13" y2="13"/><line x1="8" x2="16" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Consolidado de efectividad cuantitativa</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Ácido Glicólico 35% - 70% | 52.4% – 68.0% de reducción MASI media a las 12 semanas | Eritema, ardor, descamación, riesgo de HPI (8.5%) | Fototipos I–III (precaución en IV-VI).</p>
-          <p>Solución de Jessner / Ácido Salicílico 30% | 48.0% – 61.5% | Sequedad cutánea, eritema leve, descamación fina | Fototipos I–VI (alta seguridad en fototipos altos).</p>
-          <p>TCA 15% - 25% (Puntual / Cross / Superficial) | 65.0% – 78.2% | Frosting, costras, eritema persistente, HPI (14.2%) | Fototipos I–III (riesgo elevado en IV-VI).</p>
-          <p>Peelings Combinados (Tranexámico + Mandélico) | 58.5% – 72.0% | Eritema mínimo, escasa irritación | Fototipos I–VI (óptimo profiláctico contra HPI).</p>
+          <p>Ácido Glicólico 35% - 70% | 52.4% – 68.0% de reducción <mark class="kw-hl">MASI</mark> media a las 12 semanas | <mark class="kw-hl">Eritema</mark>, ardor, descamación, riesgo de HPI (8.5%) | <mark class="kw-hl">Fototipos</mark> I–III (precaución en IV-VI).</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:70%"></div><span>8.5% – 70%</span></div>
+          <p>Solución de Jessner / Ácido Salicílico 30% | 48.0% – 61.5% | Sequedad cutánea, <mark class="kw-hl">eritema</mark> leve, descamación fina | <mark class="kw-hl">Fototipos</mark> I–VI (alta seguridad en <mark class="kw-hl">fototipos</mark> altos).</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:61.5%"></div><span>30% – 61.5%</span></div>
+          <p><mark class="kw-hl">TCA</mark> 15% - 25% (Puntual / Cross / Superficial) | 65.0% – 78.2% | Frosting, costras, <mark class="kw-hl">eritema</mark> persistente, HPI (14.2%) | <mark class="kw-hl">Fototipos</mark> I–III (riesgo elevado en IV-VI).</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:78.2%"></div><span>14.2% – 78.2%</span></div>
+          <p>Peelings Combinados (Tranexámico + Mandélico) | 58.5% – 72.0% | <mark class="kw-hl">Eritema</mark> mínimo, escasa irritación | <mark class="kw-hl">Fototipos</mark> I–VI (óptimo profiláctico contra HPI).</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:72%"></div><span>58.5% – 72%</span></div>
         </div>
       </section>
-      <section id="apartado-27">
+      <section id="apartado-27" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
             <div>
               <h2>Resultados · Interpretación de eficacia</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Los datos demuestran que todos los agentes de peeling investigados producen una reducción estadísticamente significativa (p &lt; 0.05) de las manchas faciales. Sin embargo, la magnitud de la reducción del MASI varía sustancialmente según la profundidad de la acción y la formulación del ácido.</p>
+          <p>Los datos demuestran que todos los agentes de <mark class="kw-hl">peeling</mark> investigados producen una reducción estadísticamente significativa (p &lt; 0.05) de las manchas faciales. Sin embargo, la magnitud de la reducción del <mark class="kw-hl">MASI</mark> varía sustancialmente según la profundidad de la acción y la formulación del ácido.</p>
         </div>
       </section>
-      <section id="apartado-28">
+      <section id="apartado-28" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Contrastación teórica · Profundidad y riesgo</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>La contrastación entre los marcos teóricos tradicionales y los hallazgos de la evidencia empírica permite identificar divergencias y convergencias clave.</p>
-          <p>1. Profundidad del Peeling vs. Efectividad vs. Riesgo de Reacción</p>
-          <p>Postulado teórico clásico: La teoría clásica sostenía que a mayor profundidad de queratólisis y penetración del ácido (ej. TCA &gt;25%), mayor y más duradera sería la eliminación de la melanina, recomendando peelings de profundidad media para el tratamiento del melasma refractario.</p>
+          <p>La contrastación entre los marcos teóricos tradicionales y los hallazgos de la <mark class="kw-hl">evidencia</mark> empírica permite identificar divergencias y convergencias clave.</p>
+          <p>1. Profundidad del <mark class="kw-hl">Peeling</mark> vs. Efectividad vs. Riesgo de Reacción</p>
+          <p>Postulado teórico clásico: La teoría clásica sostenía que a mayor profundidad de queratólisis y penetración del ácido (ej. <mark class="kw-hl">TCA</mark> &gt;25%), mayor y más duradera sería la eliminación de la melanina, recomendando peelings de profundidad media para el tratamiento del <mark class="kw-hl">melasma</mark> refractario.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:25%"></div><span>25%</span></div>
         </div>
       </section>
-      <section id="apartado-29">
+      <section id="apartado-29" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Contrastación empírica · Profundidad y riesgo</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>La evidencia contemporánea refuta parcialmente este principio. Si bien los peelings de mayor profundidad (TCA al 25%) logran un porcentaje de aclaramiento inicial ligeramente superior en menos sesiones (78.2% vs 52.4%), presentan una tasa de hiperpigmentación posinflamatoria (HPI) de hasta el 14.2% en fototipos IV-VI, generando una repigmentación o rebote severo. La evidencia demuestra que las sesiones seriadas de peelings superficiales o combinados (como el ácido mandélico o salicílico) alcanzan acumulativamente tasas de reducción similares (&gt;65%) con una tasa de adversidad inferior al 2%.</p>
+          <p>La <mark class="kw-hl">evidencia</mark> contemporánea refuta parcialmente este principio. Si bien los peelings de mayor profundidad (<mark class="kw-hl">TCA</mark> al 25%) logran un porcentaje de aclaramiento inicial ligeramente superior en menos sesiones (78.2% vs 52.4%), presentan una tasa de <mark class="kw-hl">hiperpigmentación</mark> posinflamatoria (HPI) de hasta el 14.2% en <mark class="kw-hl">fototipos</mark> IV-VI, generando una repigmentación o rebote severo. La <mark class="kw-hl">evidencia</mark> demuestra que las sesiones seriadas de peelings superficiales o combinados (como el ácido mandélico o salicílico) alcanzan acumulativamente tasas de reducción similares (&gt;65%) con una tasa de adversidad inferior al 2%.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:78.2%"></div><span>2% – 78.2%</span></div>
         </div>
       </section>
-      <section id="apartado-30">
+      <section id="apartado-30" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Contrastación teórica · Exfoliación e inmunomodulación</h2>
             </div>
@@ -1531,26 +1543,26 @@
         </div>
         <div class="section-body">
           <p>2. Concepto de Exfoliación Pura vs. Inmunomodulación Vascular / Melanogénica.</p>
-          <p>Postulado teórico clásico: Tradicionalmente se consideraba que el peeling actuaba casi exclusivamente por ablación mecánica-química y remoción física del pigmento epidérmico acumulado.</p>
+          <p>Postulado teórico clásico: Tradicionalmente se consideraba que el <mark class="kw-hl">peeling</mark> actuaba casi exclusivamente por ablación mecánica-química y remoción física del pigmento epidérmico acumulado.</p>
         </div>
       </section>
-      <section id="apartado-31">
+      <section id="apartado-31" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Hallazgo empírico · Acción molecular</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Los estudios moleculares recientes demuestran que los peelings modernos (particularmente aquellos suplementados con ácido tranexámico, ácido azelaico o ácido fítico) poseen una acción pleiotrópica. No solo exfolian el estrato córneo, sino que regulan a la baja el factor de crecimiento del endotelio vascular (VEGF), reducen el componente vascular subyacente al melasma y disminuyen la transcripción de la tirosinasa. Por ende, la efectividad clínica no depende de la agresividad exfoliativa, sino del efecto modulador sobre la unidad melano-vascular.</p>
+          <p>Los estudios moleculares recientes demuestran que los peelings modernos (particularmente aquellos suplementados con ácido tranexámico, ácido azelaico o ácido fítico) poseen una acción pleiotrópica. No solo exfolian el estrato córneo, sino que regulan a la baja el factor de crecimiento del endotelio vascular (VEGF), reducen el componente vascular subyacente al <mark class="kw-hl">melasma</mark> y disminuyen la transcripción de la <mark class="kw-hl">tirosinasa</mark>. Por ende, la efectividad clínica no depende de la agresividad exfoliativa, sino del efecto modulador sobre la unidad melano-vascular.</p>
         </div>
       </section>
-      <section id="apartado-32">
+      <section id="apartado-32" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Contrastación teórica · Monoterapia y combinación</h2>
             </div>
@@ -1558,94 +1570,94 @@
         </div>
         <div class="section-body">
           <p>3. Monoterapia vs. Esquemas Combinados y Preparación Cutánea.</p>
-          <p>Postulado teórico clásico: Se conceptualizaba el peeling como una intervención aislada o autosuficiente.</p>
+          <p>Postulado teórico clásico: Se conceptualizaba el <mark class="kw-hl">peeling</mark> como una intervención aislada o autosuficiente.</p>
         </div>
       </section>
-      <section id="apartado-33">
+      <section id="apartado-33" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
             <div>
               <h2>Hallazgo empírico · Preparación cutánea</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>La evidencia confirma de manera unánime que el peeling químico por sí solo, sin una preparación previa de la piel (priming) mediante agentes despigmentantes tópicos (ej. hidroquinona 4%, ácido azelaico o retinoides durante 2 a 4 semanas previas), duplica el riesgo de rebote pigmentario. El priming inactiva parcialmente los melanocitos hiperreactivos antes de la injuria química inducida por el peeling.</p>
+          <p>La <mark class="kw-hl">evidencia</mark> confirma de manera unánime que el <mark class="kw-hl">peeling químico</mark> por sí solo, sin una preparación previa de la piel (<mark class="kw-hl">priming</mark>) mediante agentes despigmentantes tópicos (ej. hidroquinona 4%, ácido azelaico o <mark class="kw-hl">retinoides</mark> durante 2 a 4 semanas previas), duplica el riesgo de rebote pigmentario. El <mark class="kw-hl">priming</mark> inactiva parcialmente los melanocitos hiperreactivos antes de la injuria química inducida por el <mark class="kw-hl">peeling</mark>.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:4%"></div><span>4%</span></div>
         </div>
       </section>
-      <section id="apartado-34">
+      <section id="apartado-34" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4"/><path d="M4 4h12l-2 4 2 4H4"/></svg></div>
             <div>
               <h2>Conclusiones · Efectividad</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>De acuerdo con los objetivos planteados y el desarrollo de la contrastación teórica, se concluye que los tratamientos con peeling químico demuestran una elevada efectividad clínica en la reducción de hiperpigmentaciones y manchas faciales, logrando reducciones del índice MASI que oscilan entre el 48% y el 78% según el agente utilizado.</p>
+          <p>De acuerdo con los objetivos planteados y el desarrollo de la contrastación teórica, se concluye que los tratamientos con <mark class="kw-hl">peeling químico</mark> demuestran una elevada efectividad clínica en la reducción de <mark class="kw-hl">hiperpigmentaciones</mark> y manchas faciales, logrando reducciones del índice <mark class="kw-hl">MASI</mark> que oscilan entre el 48% y el 78% según el agente utilizado.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:78%"></div><span>48% – 78%</span></div>
         </div>
       </section>
-      <section id="apartado-35">
+      <section id="apartado-35" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4"/><path d="M4 4h12l-2 4 2 4H4"/></svg></div>
             <div>
               <h2>Conclusiones · Fototipos</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>La hipótesis de que “a mayor agresividad y profundidad del peeling se obtienen mejores resultados” ha sido desmentida por la evidencia científica en fototipos intermedios y altos (Fitzpatrick IV-VI). En estos pacientes, los peelings superficiales seriados (AHA, BHA, combinados) ofrecen una efectividad global equivalente a largo plazo, garantizando un perfil de seguridad inmensamente superior.</p>
+          <p>La hipótesis de que “a mayor agresividad y profundidad del <mark class="kw-hl">peeling</mark> se obtienen mejores resultados” ha sido desmentida por la <mark class="kw-hl">evidencia</mark> científica en <mark class="kw-hl">fototipos</mark> intermedios y altos (Fitzpatrick IV-VI). En estos pacientes, los peelings superficiales seriados (AHA, BHA, combinados) ofrecen una efectividad global equivalente a largo plazo, garantizando un perfil de seguridad inmensamente superior.</p>
         </div>
       </section>
-      <section id="apartado-36">
+      <section id="apartado-36" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
             <div>
               <h2>Conclusiones · Moléculas y protocolo</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>La inclusión de moléculas de última generación con capacidad inmunomoduladora y antiangiogénica (como el ácido tranexámico y mandélico) representa el avance más significativo en la quimioexfoliación, reduciendo drásticamente las tasas de recurrencia al controlar no solo el pigmento, sino la microinflamación del microambiente dérmico.</p>
-          <p>El peeling químico no debe considerarse una terapia ablativa aislada, sino un vehículo acelerador en el seno de un protocolo integral que requiere obligatoriamente una fase de preparación previa (priming) y una estricta fotoprotección posterior de amplio espectro.</p>
+          <p>La inclusión de moléculas de última generación con capacidad inmunomoduladora y antiangiogénica (como el ácido tranexámico y mandélico) representa el avance más significativo en la quimioexfoliación, reduciendo drásticamente las tasas de <mark class="kw-hl">recurrencia</mark> al controlar no solo el pigmento, sino la microinflamación del microambiente dérmico.</p>
+          <p>El <mark class="kw-hl">peeling químico</mark> no debe considerarse una terapia ablativa aislada, sino un vehículo acelerador en el seno de un protocolo integral que requiere obligatoriamente una fase de preparación previa (<mark class="kw-hl">priming</mark>) y una estricta <mark class="kw-hl">fotoprotección</mark> posterior de amplio espectro.</p>
         </div>
       </section>
-      <section id="apartado-37">
+      <section id="apartado-37" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
             <div>
               <h2>Recomendaciones · Fototipo y priming</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Individualización según Fototipo: Utilizar preferentemente agentes lipofílicos o de baja irritabilidad (ácido salicílico 20-30%, ácido mandélico 30%, ácido tranexámico) en fototipos altos (Fitzpatrick IV-VI) para prevenir la HPI.</p>
-          <p>Protocolo Obligatorio de Priming: Establecer como norma clínica la preparación de la piel con retinoides tópicos e inhibidores de la tirosinasa entre 14 y 30 días antes de la primera sesión de peeling químico.</p>
+          <p>Individualización según Fototipo: Utilizar preferentemente agentes lipofílicos o de baja irritabilidad (ácido salicílico 20-30%, ácido mandélico 30%, ácido tranexámico) en <mark class="kw-hl">fototipos</mark> altos (Fitzpatrick IV-VI) para prevenir la HPI.</p><div class="pbar" aria-hidden="true"><div class="pbar-fill" style="--w:30%"></div><span>30%</span></div>
+          <p>Protocolo Obligatorio de <mark class="kw-hl">Priming</mark>: Establecer como norma clínica la preparación de la piel con <mark class="kw-hl">retinoides</mark> tópicos e inhibidores de la <mark class="kw-hl">tirosinasa</mark> entre 14 y 30 días antes de la primera sesión de <mark class="kw-hl">peeling químico</mark>.</p>
         </div>
       </section>
-      <section id="apartado-38">
+      <section id="apartado-38" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
             <div>
               <h2>Recomendaciones · Tratamiento e investigación futura</h2>
             </div>
           </div>
         </div>
         <div class="section-body">
-          <p>Tratamiento Combinado de Vías Patogénicas: Priorizar el uso de peeling de formulación multifactorial o combinada que asocie la acción exfoliativa (AHA/BHA) con agentes que bloqueen la señalización melanogénica y vascular.</p>
-          <p>Líneas de Investigación Futura: Fomentar la realización de ensayos clínicos aleatorizados a largo plazo (seguimiento mayor a 12 meses) que evalúen la combinación de peeling químico con terapias avanzadas no ablativas (como luz pulsada intensa o láser de picosegundos) para el melasma recalcitrante.</p>
+          <p>Tratamiento Combinado de Vías Patogénicas: Priorizar el uso de <mark class="kw-hl">peeling</mark> de formulación multifactorial o combinada que asocie la acción exfoliativa (AHA/BHA) con agentes que bloqueen la señalización melanogénica y vascular.</p>
+          <p>Líneas de Investigación Futura: Fomentar la realización de ensayos clínicos aleatorizados a largo plazo (seguimiento mayor a 12 meses) que evalúen la combinación de <mark class="kw-hl">peeling químico</mark> con terapias avanzadas no ablativas (como luz pulsada intensa o láser de picosegundos) para el <mark class="kw-hl">melasma</mark> recalcitrante.</p>
         </div>
       </section>
-      <section id="apartado-39">
+      <section id="apartado-39" class="reveal">
         <div class="section-top-row">
           <div class="section-header">
-            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="section-icon-wrap amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4"/><path d="M4 4h12l-2 4 2 4H4"/></svg></div>
             <div>
               <h2>Cierre</h2>
             </div>
@@ -1685,6 +1697,9 @@
   }
   addEventListener('scroll', onScroll, {passive: true});
   onScroll();
+
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => { el.classList.add('lift'); io.observe(el); });
 
   const input = document.getElementById('docSearch');
   const empty = document.getElementById('emptySearch');
