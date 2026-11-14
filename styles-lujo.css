@@ -254,3 +254,6 @@ mark.kw-soft{
   }
   .hero-showcase .experts-note{margin-top:22px!important}
 }
+
+/* Garantiza que el contenido de la portada siempre se vea (aunque un script falle) */
+.reveal{opacity:1!important;transform:none!important}
