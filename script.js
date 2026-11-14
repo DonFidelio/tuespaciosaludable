@@ -111,7 +111,7 @@ const FAQS = [
 ];
 
 /* ---------- UTILIDADES ---------- */
-const $ = (s, el = document) => el.querySelector(s);
+const $ = (s, el = document) => el.querySelector(s) || document.createElement("div"); // si una sección no existe, no rompe el resto del script
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
