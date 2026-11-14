@@ -74,3 +74,45 @@ h2{font-size:clamp(30px,3.8vw,48px)!important;line-height:1.12!important}
 
 /* Movimiento sutil en elementos de entrada */
 .reveal{transition:opacity .8s ease,transform .8s ease!important}
+
+/* =========================================================
+   Palabras clave (resaltador verde de la paleta)
+   ========================================================= */
+mark.kw{
+  background:linear-gradient(transparent 52%,rgba(184,216,188,.75) 52%);
+  color:var(--lujo-deep);
+  padding:0 .18em;
+  border-radius:4px;
+  font-weight:700;
+  font-style:normal;
+}
+mark.kw-strong{
+  background:linear-gradient(135deg,var(--lujo-5),var(--lujo-deep));
+  color:#f4f7f2;
+  border-radius:8px;
+  padding:.05em .45em;
+  box-shadow:0 6px 14px -8px rgba(47,70,55,.7);
+}
+mark.kw-soft{
+  background:var(--lujo-1);
+  color:var(--lujo-ink);
+  border-radius:8px;
+  padding:.05em .45em;
+}
+.hero-lead{max-width:680px;font-size:clamp(18px,2.1vw,21px);line-height:1.75;color:#4d5f52}
+
+/* Titular de portada con degradado verde */
+.hero-showcase h1{
+  background:linear-gradient(120deg,var(--lujo-deep) 0%,var(--lujo-5) 45%,var(--lujo-4) 70%,var(--lujo-deep) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent!important;
+}
+
+/* Chips y botones funcionales con estados claros */
+.chip{border-color:var(--lujo-line)!important;transition:all .2s ease}
+.chip:hover{border-color:var(--lujo-3)!important;color:var(--lujo-deep)!important}
+.round-btn{background:#fff!important;border:1px solid var(--lujo-line)!important;color:var(--lujo-deep)!important;transition:all .2s ease}
+.round-btn:hover{background:var(--lujo-deep)!important;color:#fff!important;border-color:var(--lujo-deep)!important}
+.progress{background:var(--lujo-line)!important;height:6px!important;border-radius:99px;overflow:hidden}
+.progress i{background:linear-gradient(90deg,var(--lujo-1),var(--lujo-5))!important;border-radius:99px}
+.faq details[open] summary{color:var(--lujo-deep)}
+.form input:focus,.form select:focus,.form textarea:focus,.faq-search input:focus{border-color:var(--lujo-4)!important;box-shadow:0 0 0 4px rgba(134,162,135,.22)!important;outline:none}
