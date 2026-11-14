@@ -257,3 +257,21 @@ mark.kw-soft{
 
 /* Garantiza que el contenido de la portada siempre se vea (aunque un script falle) */
 .reveal{opacity:1!important;transform:none!important}
+
+/* TELÉFONO · que el bloque de proyectos se vea completo antes de la sección de evidencia */
+@media (max-width:700px){
+  .hero{
+    min-height:auto!important;
+    height:auto!important;
+    overflow:visible!important;
+    padding-bottom:56px!important;
+  }
+  .hero-showcase{padding-bottom:0!important}
+  .hero-showcase .expert-row-extra .expert-card{
+    margin:0 auto!important;
+    min-height:76px!important;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .hero-showcase .expert-grid{padding-bottom:0!important;margin-bottom:0!important}
+  #evidencia{padding-top:64px!important}
+}
