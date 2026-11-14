@@ -220,3 +220,37 @@ mark.kw-soft{
   .hero-showcase .hero-copy{gap:14px;margin-bottom:28px!important}
   .hero-showcase .expert-grid{margin-top:4px!important}
 }
+
+/* =========================================================
+   TELÉFONO · proyectos en una sola rejilla limpia
+   (solo ≤ 700 px; escritorio sin cambios)
+   ========================================================= */
+@media (max-width:700px){
+  /* Las filas se desvanecen para que las 10 tarjetas fluyan en 2 columnas parejas */
+  .hero-showcase .expert-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+    width:100%!important;
+  }
+  .hero-showcase .expert-row{display:contents!important}
+  .hero-showcase .expert-card{
+    width:100%!important;max-width:none!important;min-height:84px!important;
+    margin:0!important;grid-column:auto!important;justify-self:stretch!important;
+    padding:14px 12px!important;
+  }
+  /* La última tarjeta (Nutrición infantil) ocupa el ancho completo y queda centrada */
+  .hero-showcase .expert-row-extra .expert-card{grid-column:1/-1!important;justify-self:center!important;width:min(100%,300px)!important}
+  .hero-showcase .project-topic{font-size:13.5px!important;line-height:1.3!important;text-align:center}
+
+  /* Widgets flotantes: más pequeños y sin tapar tarjetas */
+  .visits-corner-widget{
+    left:12px!important;right:auto!important;bottom:12px!important;top:auto!important;
+    transform:scale(.82);transform-origin:left bottom;
+  }
+  .qr-corner-widget{
+    top:auto!important;bottom:12px!important;right:12px!important;
+    transform:scale(.82);transform-origin:right bottom;
+  }
+  .hero-showcase .experts-note{margin-top:22px!important}
+}
