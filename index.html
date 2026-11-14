@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tu espacio saludable</title>
   <meta name="description" content="Un espacio para conocer nuestra propuesta de atención, encontrar información útil y acercarte a los servicios de salud.">
-  <meta name="theme-color" content="#087f80">
+  <meta name="theme-color" content="#55705c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=18">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=19">
+  <link rel="stylesheet" href="styles-lujo.css?v=1">
 </head>
 <body>
 
@@ -247,18 +248,18 @@
       background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 1px solid #cbd5e1;
+      border: 1px solid #dfe7dc;
       border-radius: 14px;
       padding: 6px 12px 6px 7px;
-      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.14);
+      box-shadow: 0 10px 25px -5px rgba(38, 54, 44, 0.14);
       cursor: pointer;
       transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
     }
 
     .qr-corner-btn:hover {
       transform: translateY(-2px);
-      border-color: #4338ca;
-      box-shadow: 0 14px 30px -5px rgba(67, 56, 202, 0.22);
+      border-color: #55705c;
+      box-shadow: 0 14px 30px -5px rgba(85, 112, 92, 0.22);
     }
 
     .qr-mini-frame {
@@ -267,7 +268,7 @@
       border-radius: 8px;
       background: #ffffff;
       padding: 3px;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #dfe7dc;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -290,13 +291,13 @@
       display: block;
       font-size: 0.78rem;
       font-weight: 800;
-      color: #0f172a;
+      color: #26362c;
     }
 
     .qr-btn-text span {
       font-size: 0.68rem;
       font-weight: 600;
-      color: #4338ca;
+      color: #55705c;
     }
 
     .qr-popover {
@@ -305,11 +306,11 @@
       right: 0;
       width: 268px;
       background: #ffffff;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #dfe7dc;
       border-radius: 20px;
       padding: 1.25rem;
       text-align: center;
-      box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.24);
+      box-shadow: 0 24px 48px -12px rgba(38, 54, 44, 0.24);
       opacity: 0;
       visibility: hidden;
       transform: translateY(-8px) scale(0.97);
@@ -325,19 +326,19 @@
     .qr-popover-title {
       font-size: 0.88rem;
       font-weight: 800;
-      color: #0f172a;
+      color: #26362c;
       margin-bottom: 0.2rem;
     }
 
     .qr-popover-sub {
       font-size: 0.74rem;
-      color: #64748b;
+      color: #7f8f83;
       margin-bottom: 0.9rem;
     }
 
     .qr-large-box {
-      background: linear-gradient(135deg, #eef2ff 0%, #fdf2f8 100%);
-      border: 1px solid #e2e8f0;
+      background: linear-gradient(135deg, #eef4ea 0%, #f6f9f3 100%);
+      border: 1px solid #dfe7dc;
       border-radius: 16px;
       padding: 0.85rem;
       display: inline-block;
@@ -360,9 +361,9 @@
     }
 
     .qr-action-btn {
-      border: 1px solid #cbd5e1;
-      background: #f8fafc;
-      color: #0f172a;
+      border: 1px solid #dfe7dc;
+      background: #f6f9f3;
+      color: #26362c;
       font-size: 0.74rem;
       font-weight: 700;
       padding: 0.5rem 0.6rem;
@@ -372,19 +373,19 @@
     }
 
     .qr-action-btn:hover {
-      background: #eef2ff;
-      border-color: #4338ca;
-      color: #4338ca;
+      background: #eef4ea;
+      border-color: #55705c;
+      color: #55705c;
     }
 
     .qr-action-btn.primary {
-      background: #4338ca;
-      border-color: #4338ca;
+      background: #55705c;
+      border-color: #55705c;
       color: #ffffff;
     }
 
     .qr-action-btn.primary:hover {
-      background: #3730a3;
+      background: #3f5947;
     }
 
     @media (max-width: 640px) {
@@ -404,7 +405,7 @@
   <div class="qr-corner-widget" id="qrCornerWidget">
     <button type="button" class="qr-corner-btn" id="qrToggleBtn" aria-expanded="false" aria-label="Mostrar código QR para compartir">
       <div class="qr-mini-frame">
-        <img id="qrMiniImg" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=4&color=0f172a&data=https%3A%2F%2Fdonfidelio.github.io%2Ftuespaciosaludable%2Findex.html" alt="QR compartir página">
+        <img id="qrMiniImg" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=4&color=2f4637&data=https%3A%2F%2Fdonfidelio.github.io%2Ftuespaciosaludable%2Findex.html" alt="QR compartir página">
       </div>
       <div class="qr-btn-text">
         <strong>Compartir</strong>
@@ -416,7 +417,7 @@
       <div class="qr-popover-title">Comparte este espacio</div>
       <div class="qr-popover-sub">Escanea con la cámara de tu teléfono</div>
       <div class="qr-large-box">
-        <img id="qrLargeImg" src="https://api.qrserver.com/v1/create-qr-code/?size=360x360&margin=8&color=0f172a&data=https%3A%2F%2Fdonfidelio.github.io%2Ftuespaciosaludable%2Findex.html" alt="Código QR grande">
+        <img id="qrLargeImg" src="https://api.qrserver.com/v1/create-qr-code/?size=360x360&margin=8&color=2f4637&data=https%3A%2F%2Fdonfidelio.github.io%2Ftuespaciosaludable%2Findex.html" alt="Código QR grande">
       </div>
       <div class="qr-actions">
         <button type="button" class="qr-action-btn" id="qrCopyBtn">Copiar enlace</button>
@@ -501,14 +502,14 @@
       align-items: center;
       gap: 10px;
       padding: 9px 14px 9px 11px;
-      border: 1px solid rgba(203, 213, 225, 0.95);
+      border: 1px solid rgba(223, 231, 220, 0.95);
       border-radius: 14px;
       background: rgba(255, 255, 255, 0.94);
       -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
-      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.12);
+      box-shadow: 0 10px 25px -5px rgba(38, 54, 44, 0.12);
       font-family: 'DM Sans', system-ui, sans-serif;
-      color: #0f172a;
+      color: #26362c;
       min-width: 142px;
     }
 
@@ -519,7 +520,7 @@
       place-items: center;
       flex: 0 0 36px;
       border-radius: 10px;
-      color: #087f80;
+      color: #55705c;
       background: #e6f4f1;
     }
 
@@ -533,14 +534,14 @@
     .visits-corner-label {
       font-size: 0.68rem;
       font-weight: 700;
-      color: #64748b;
+      color: #7f8f83;
       letter-spacing: 0.02em;
     }
 
     .visits-corner-number {
       font-size: 1rem;
       font-weight: 800;
-      color: #0f172a;
+      color: #26362c;
       font-variant-numeric: tabular-nums;
       min-width: 52px;
     }
@@ -557,7 +558,7 @@
     }
 
     .visits-corner-credit:hover {
-      color: #087f80;
+      color: #55705c;
       text-decoration: underline;
     }
 

@@ -1,0 +1,76 @@
+/* =========================================================
+   LUJO · capa final de diseño (elegante, formal, profesional)
+   Paleta: verdes salvia del muestrario.
+   ========================================================= */
+:root{
+  --lujo-1:#b8d8bc;   /* verde menta claro */
+  --lujo-2:#9fbfa5;
+  --lujo-3:#86a287;
+  --lujo-4:#678268;
+  --lujo-5:#55705c;   /* verde bosque */
+  --lujo-deep:#2f4637;
+  --lujo-ink:#26362c;
+  --lujo-cream:#fbfbf7;
+  --lujo-line:#dfe7dc;
+  --font-serif:"Playfair Display",Georgia,"Times New Roman",serif;
+}
+
+body{background:var(--lujo-cream)!important;color:var(--lujo-ink)!important}
+html{scroll-behavior:smooth}
+
+/* Tipografía de títulos: serif elegante */
+h1,h2,h3{font-family:var(--font-serif)!important;font-weight:600!important;letter-spacing:-.01em!important;color:var(--lujo-ink)!important}
+h1{font-size:clamp(40px,6vw,72px)!important;line-height:1.05!important}
+h2{font-size:clamp(30px,3.8vw,48px)!important;line-height:1.12!important}
+.hero-showcase h1{font-family:var(--font-serif)!important;font-weight:600!important;letter-spacing:-.015em!important}
+.lead,p{font-family:"DM Sans",sans-serif!important;color:#4d5f52}
+
+/* Etiquetas con filete */
+.tag{color:var(--lujo-4)!important;font-size:11.5px!important;letter-spacing:.26em!important;display:inline-flex!important;align-items:center;gap:12px}
+.tag::before{content:"";width:34px;height:1px;background:var(--lujo-3);display:inline-block}
+.tag.light{color:var(--lujo-1)!important}
+.tag.light::before{background:var(--lujo-1)}
+.center .tag::after{content:"";width:34px;height:1px;background:var(--lujo-3);display:inline-block}
+
+/* Encabezados de sección con ornamento */
+.section-head h2::after{content:"";display:block;width:64px;height:2px;margin:22px 0 0;background:linear-gradient(90deg,var(--lujo-5),var(--lujo-1))}
+.section-head.center h2::after{margin-left:auto;margin-right:auto}
+
+/* Secciones */
+.section{padding:clamp(70px,9vw,120px) 0}
+.section.alt{background:linear-gradient(180deg,#f3f7f0,#eef4ea)!important}
+
+/* Botones */
+.btn-primary{background:linear-gradient(135deg,var(--lujo-5),var(--lujo-deep))!important;box-shadow:0 14px 28px -12px rgba(47,70,55,.55)!important;letter-spacing:.02em}
+.btn-primary:hover{background:linear-gradient(135deg,var(--lujo-deep),#213226)!important}
+.btn-ghost{border-color:var(--lujo-5)!important;color:var(--lujo-deep)!important;letter-spacing:.02em}
+
+/* Tarjetas: marco fino, sombra suave */
+.expert-card,.benefit,.card,.program,.track > *,.quote,.guide-right,.faq details,.form,.contact-list li{
+  border-radius:18px!important;
+  border:1px solid var(--lujo-line)!important;
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 18px 40px -26px rgba(47,70,55,.35)!important;
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important;
+}
+.expert-card:hover,.benefit:hover,.program:hover{transform:translateY(-4px);border-color:var(--lujo-3)!important;box-shadow:0 26px 50px -24px rgba(47,70,55,.45)!important}
+
+/* Cabecera y navegación */
+.site-header{background:rgba(251,251,247,.92)!important;backdrop-filter:blur(12px);border-bottom:1px solid var(--lujo-line)!important}
+.logo{font-family:var(--font-serif)!important;font-weight:600!important;letter-spacing:.01em}
+.logo-mark{background:linear-gradient(135deg,var(--lujo-5),var(--lujo-deep))!important;color:#fff!important}
+.nav a{letter-spacing:.02em}
+
+/* Pie de página */
+.footer{background:linear-gradient(160deg,var(--lujo-ink),#1d2b22)!important;color:#d6e4d3!important}
+.footer h4,.footer strong{font-family:var(--font-serif)!important;color:#fff!important}
+.footer a{color:var(--lujo-1)!important}
+.footer .legal{border-top-color:rgba(184,216,188,.2)!important}
+
+/* Filtros y chips */
+.chip.on,.chip[aria-pressed="true"]{background:var(--lujo-deep)!important;border-color:var(--lujo-deep)!important}
+
+/* Foco accesible */
+:focus-visible{outline-color:var(--lujo-3)!important}
+
+/* Movimiento sutil en elementos de entrada */
+.reveal{transition:opacity .8s ease,transform .8s ease!important}
